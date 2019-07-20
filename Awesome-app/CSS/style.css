@@ -70,11 +70,11 @@ h5{
     font-weight: 500;
 }
 
-h1 :first-child,
-h2 :first-child,
-h3 :first-child,
-h4 :first-child,
-h5 :first-child{
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child{
     padding-top: 0;
     margin-top: 0;
 }
@@ -92,12 +92,12 @@ Estilos Generales
 *************************************/
 :root{
     --primary-color:#fff;
-    --secondary-color:#000;
+    --secondary-color:#f1f1f1;
     --tertiary-color:#a0a3a8;
     --quaternary-color:#747474;
     --quinary-color:#4b4c50;
 
-    --primary-background:#FD702C ;
+    --primary-background: #F53C58;
 }
 
 *,
@@ -137,11 +137,16 @@ li{
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
-
-    outline: 1px solid red;
 }
 
-
+.main-container-small{
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    /*
+    margin-left:auto;
+    margin-rigth: auto*/
+}
 
 
 
@@ -149,16 +154,237 @@ li{
 Estilos
 *******************************/
 /* main-header */
+.main-header{
+    height: 115px   ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
 .header{
     height: 115px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    align-items: center
+}
+
+.menu ul {
+    display: flex;
+    margin: 0;
+}
+
+.menu li{
+    margin-left: 45px;
+    margin-bottom: 0
+}
+
+.menu a {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+.btn {
+    border: 2px solid var(--primary-color);
+    border-radius: 23px;
+    padding: 10px 29px;
+    color: var(--primary-color);  
+    text-transform: uppercase  
+}
+
+/***main-hero-banner***/
+.main-hero-banner {
+    background-color: var(--primary-background);
+    padding-top: 115px;
+
+}
+
+.hero-banner{
+    height: 546px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.description{
+
+    width: 50%;
+    display: flex;
+    align-items: center ;    
+}
+
+.description> div{
+    max-width: 531px;
+    width: 100%;
+    color: var(--primary-color);  
+}
+
+.description h1{
+    margin-bottom: 21px;
+    
+}
+.description ul{
+    margin-bottom: 40px;
+}
+
+.description .btn{
+    display: inline-block;
+}
+
+.list-check li{
+    padding-left: 25px;
+    position: relative;
+}
+
+.list-check img {
+    position: absolute;
+    left:0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.img-banner{
+    width: 50%;     
+    text-align: right
+}
+
+.img-banner img{
+    padding-top: 37px;
+    padding-right: 69px;
+}
+
+.list-check{
+    margin-bottom: 40px
 }
 
 
 
 
+/*main-features*/
+.main-features{
+    padding-top: 97px;
+}
+
+.features{
+    width: 100%;
+    display: flex;
+
+    padding-bottom: 66px;
+    border-bottom: 1px solid var(--secondary-color);
+    flex-wrap: wrap;
+}
+
+.features-item{
+    max-width: 337px;
+    margin-right:63px;
+    padding-left: 77px;
+    position: relative;
+    margin-bottom: 39px;
+
+    outline: 1px solid green;
+}
+
+.features-item:nth-child(3n){
+    margin-right: 0;    
+}
+
+.features-item p {
+    color: var(--tertiary-color);
+}
+
+/* main-intro */
+.intro{
+    min-height: 540px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-top{
+    width:448px;
+    align-self: flex-end;
+}
+
+.intro-description{
+    width: 732px;
+
+}
+
+.intro-content{
+    max-width: 605px;
+    padding-left: 58px;
+}
+
+.intro-description ul{
+    color: var(--tertiary-color);
+}
+
+.intro-description h2{
+    margin-bottom: 11px;
+}
+
+.intro-description span{
+    color: var(--tertiary-color);
+    display: inline-block;
+    margin-bottom: 38px; 
+}
+
+.intro-description p{
+margin-top: 0;
+margin-bottom: 25px;
+}
 
 
+/*main-download-app*/
 
+.main-download-app{
+    background-color: var(--primary-background);
+    padding-top: 94px;
+    padding-bottom: 68px
+}
 
+.download-app-top{
+    text-align: center
+}
+
+.download-app-top h2{
+    color: var(--primary-color)
+}
+
+.download-app-list{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 45px;
+}
+.download-app-item{
+    background-color: var(--primary-color);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.15);
+    width: 340px;
+    display: flex
+    
+}
+
+.download-app-item:not(:last-child){
+    margin-right: 30px
+}
+.download-app-item div {
+    margin-left: 20px
+}
+
+.download-app-item p{
+    color: var(--tertiary-color);
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0
+}
+.download-app-item h3{
+    color: #000;
+    margin-bottom: 3px
+}
